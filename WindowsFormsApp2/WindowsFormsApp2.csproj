@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FE0046C-7178-4A61-9C5C-172655D3159E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp2</RootNamespace>
+    <AssemblyName>WindowsFormsApp2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGategory.Designer.cs">
+      <DependentUpon>AddGategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminProfile.Designer.cs">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllAdmins.Designer.cs">
+      <DependentUpon>AllAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllCustomers.Designer.cs">
+      <DependentUpon>AllCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllGategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllGategory.Designer.cs">
+      <DependentUpon>AllGategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllProduct.Designer.cs">
+      <DependentUpon>AllProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllProductSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllProductSeller.Designer.cs">
+      <DependentUpon>AllProductSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllSeller.Designer.cs">
+      <DependentUpon>AllSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordSeller.Designer.cs">
+      <DependentUpon>ChangePasswordSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeProduct.Designer.cs">
+      <DependentUpon>ChangeProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUserName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUserName.Designer.cs">
+      <DependentUpon>ChangeUserName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUserNameSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUserNameSeller.Designer.cs">
+      <DependentUpon>ChangeUserNameSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Congratulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Congratulation.Designer.cs">
+      <DependentUpon>Congratulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="Conversation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conversation.Designer.cs">
+      <DependentUpon>Conversation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBManager.cs" />
+    <Compile Include="matger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matger.Designer.cs">
+      <DependentUpon>matger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add your product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add your product.Designer.cs">
+      <DependentUpon>Add your product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer profile.Designer.cs">
+      <DependentUpon>customer profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProducts.Designer.cs">
+      <DependentUpon>MyProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seller profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seller profile.Designer.cs">
+      <DependentUpon>seller profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingCustomer.Designer.cs">
+      <DependentUpon>SettingCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingSeller.Designer.cs">
+      <DependentUpon>SettingSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign as seller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign as seller.Designer.cs">
+      <DependentUpon>sign as seller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Add your product.resx">
+      <DependentUpon>Add your product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGategory.resx">
+      <DependentUpon>AddGategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminProfile.resx">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllAdmins.resx">
+      <DependentUpon>AllAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllCustomers.resx">
+      <DependentUpon>AllCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllGategory.resx">
+      <DependentUpon>AllGategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllProduct.resx">
+      <DependentUpon>AllProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllProductSeller.resx">
+      <DependentUpon>AllProductSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllSeller.resx">
+      <DependentUpon>AllSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordSeller.resx">
+      <DependentUpon>ChangePasswordSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeProduct.resx">
+      <DependentUpon>ChangeProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUserName.resx">
+      <DependentUpon>ChangeUserName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUserNameSeller.resx">
+      <DependentUpon>ChangeUserNameSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Congratulation.resx">
+      <DependentUpon>Congratulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conversation.resx">
+      <DependentUpon>Conversation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matger.resx">
+      <DependentUpon>matger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer profile.resx">
+      <DependentUpon>customer profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProducts.resx">
+      <DependentUpon>MyProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seller profile.resx">
+      <DependentUpon>seller profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCustomer.resx">
+      <DependentUpon>SettingCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingSeller.resx">
+      <DependentUpon>SettingSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign as seller.resx">
+      <DependentUpon>sign as seller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
